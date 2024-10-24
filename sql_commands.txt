@@ -1,0 +1,180 @@
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 42
+Server version: 8.3.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database ruhande;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use ruhande;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table ngoma(id int(20), firstName varchar(50), lastName varchar(50), gender varchar(10), province varchar(50), district varchar(50), sector varchar(50), cell varchar(50), emailAdress varchar(50), telephone varchar(50));
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+mysql> show tables;
++-------------------+
+| Tables_in_ruhande |
++-------------------+
+| ngoma             |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> desc ngoma;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| id          | int         | YES  |     | NULL    |       |
+| firstName   | varchar(50) | YES  |     | NULL    |       |
+| lastName    | varchar(50) | YES  |     | NULL    |       |
+| gender      | varchar(10) | YES  |     | NULL    |       |
+| province    | varchar(50) | YES  |     | NULL    |       |
+| district    | varchar(50) | YES  |     | NULL    |       |
+| sector      | varchar(50) | YES  |     | NULL    |       |
+| cell        | varchar(50) | YES  |     | NULL    |       |
+| emailAdress | varchar(50) | YES  |     | NULL    |       |
+| telephone   | varchar(50) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+10 rows in set (0.00 sec)
+
+mysql> insert into ngoma values('1199876678776654','Claude','NISHIMWE','MALE','WEST','KARONGI','MURUNDI','KABAYA','claude@gmail.com','0786544345'),('1199087654345678','Claudine','ISHIMWE','FEMALE','KIGALI','GASABO','KAKIRU','KAMUTWA','claudine@gmail.com','0793455628'),('1199665456778854','Janviel','NIYONSENGA','MALE','EASTER','NYAGATARE','RUKOMA','RUKINGU','janviel@gmail.com','0796544324'),('1199875564554323','Adolphe','NAYITURIKI','MALE','SOUTH','HUYE','NGOMA','RUHANDE','adolphe@gmail.com','0786544276'),('1199876545678975','Bernard','NDAGIJIMANA','MALE','SOUTH','RUHANGO','MUHOZA','KAREBA','bernald@gmail.com','0785344567'),('1199884567879876','Evode','NIZEYIMANA','MALE','NORTH','MUSANZE','KINIGI','KARAGWE','evode@gmail.com','07895466734'),('1998898765334567','Emannuel','IRANZI','MALE','KIGALI','NYARUGENGE','GITESI','KARAMBI','emmanuel@gmail.com','0794566734'),('1189765434567898','Venuste','NDAHAYO','MALE','EASTER','KAYONZA','MUKINGO','KARENGE','venuste@gmail.com','07865443216'),('1199876543234567','Belyse','KANGABE','FEMALE','NORTH','GICUMBI','KIRAMURUZI','MUGOMERO','belyse@gmail.com','07886533278'),('11997876543245678','Jdamila','UMWIZA','FEMALE','WEST','RUBAVU','MBUGANGARI','BUSASAMANA','djamila@gmail.com','0786455378');
+Query OK, 10 rows affected, 10 warnings (0.02 sec)
+Records: 10  Duplicates: 0  Warnings: 10
+
+mysql> select * from ngoma;
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+
+| id         | firstName | lastName    | gender | province | district   | sector     | cell       | emailAdress        | telephone   |
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+
+| 2147483647 | Claude    | NISHIMWE    | MALE   | WEST     | KARONGI    | MURUNDI    | KABAYA     | claude@gmail.com   | 0786544345  |
+| 2147483647 | Claudine  | ISHIMWE     | FEMALE | KIGALI   | GASABO     | KAKIRU     | KAMUTWA    | claudine@gmail.com | 0793455628  |
+| 2147483647 | Janviel   | NIYONSENGA  | MALE   | EASTER   | NYAGATARE  | RUKOMA     | RUKINGU    | janviel@gmail.com  | 0796544324  |
+| 2147483647 | Adolphe   | NAYITURIKI  | MALE   | SOUTH    | HUYE       | NGOMA      | RUHANDE    | adolphe@gmail.com  | 0786544276  |
+| 2147483647 | Bernard   | NDAGIJIMANA | MALE   | SOUTH    | RUHANGO    | MUHOZA     | KAREBA     | bernald@gmail.com  | 0785344567  |
+| 2147483647 | Evode     | NIZEYIMANA  | MALE   | NORTH    | MUSANZE    | KINIGI     | KARAGWE    | evode@gmail.com    | 07895466734 |
+| 2147483647 | Emannuel  | IRANZI      | MALE   | KIGALI   | NYARUGENGE | GITESI     | KARAMBI    | emmanuel@gmail.com | 0794566734  |
+| 2147483647 | Venuste   | NDAHAYO     | MALE   | EASTER   | KAYONZA    | MUKINGO    | KARENGE    | venuste@gmail.com  | 07865443216 |
+| 2147483647 | Belyse    | KANGABE     | FEMALE | NORTH    | GICUMBI    | KIRAMURUZI | MUGOMERO   | belyse@gmail.com   | 07886533278 |
+| 2147483647 | Jdamila   | UMWIZA      | FEMALE | WEST     | RUBAVU     | MBUGANGARI | BUSASAMANA | djamila@gmail.com  | 0786455378  |
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+
+10 rows in set (0.00 sec)
+
+mysql> desc ngoma;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| id          | int         | YES  |     | NULL    |       |
+| firstName   | varchar(50) | YES  |     | NULL    |       |
+| lastName    | varchar(50) | YES  |     | NULL    |       |
+| gender      | varchar(10) | YES  |     | NULL    |       |
+| province    | varchar(50) | YES  |     | NULL    |       |
+| district    | varchar(50) | YES  |     | NULL    |       |
+| sector      | varchar(50) | YES  |     | NULL    |       |
+| cell        | varchar(50) | YES  |     | NULL    |       |
+| emailAdress | varchar(50) | YES  |     | NULL    |       |
+| telephone   | varchar(50) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+10 rows in set (0.00 sec)
+
+mysql> select * from ngoma where firstName = 'Claude';
++------------+-----------+----------+--------+----------+----------+---------+--------+------------------+------------+
+| id         | firstName | lastName | gender | province | district | sector  | cell   | emailAdress      | telephone  |
++------------+-----------+----------+--------+----------+----------+---------+--------+------------------+------------+
+| 2147483647 | Claude    | NISHIMWE | MALE   | WEST     | KARONGI  | MURUNDI | KABAYA | claude@gmail.com | 0786544345 |
++------------+-----------+----------+--------+----------+----------+---------+--------+------------------+------------+
+1 row in set (0.00 sec)
+
+mysql> alter table ngoma add column age int(3);
+Query OK, 10 rows affected, 1 warning (0.05 sec)
+Records: 10  Duplicates: 0  Warnings: 1
+
+mysql> select * from ngoma;
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+------+
+| id         | firstName | lastName    | gender | province | district   | sector     | cell       | emailAdress        | telephone   | age  |
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+------+
+| 2147483647 | Claude    | NISHIMWE    | MALE   | WEST     | KARONGI    | MURUNDI    | KABAYA     | claude@gmail.com   | 0786544345  | NULL |
+| 2147483647 | Claudine  | ISHIMWE     | FEMALE | KIGALI   | GASABO     | KAKIRU     | KAMUTWA    | claudine@gmail.com | 0793455628  | NULL |
+| 2147483647 | Janviel   | NIYONSENGA  | MALE   | EASTER   | NYAGATARE  | RUKOMA     | RUKINGU    | janviel@gmail.com  | 0796544324  | NULL |
+| 2147483647 | Adolphe   | NAYITURIKI  | MALE   | SOUTH    | HUYE       | NGOMA      | RUHANDE    | adolphe@gmail.com  | 0786544276  | NULL |
+| 2147483647 | Bernard   | NDAGIJIMANA | MALE   | SOUTH    | RUHANGO    | MUHOZA     | KAREBA     | bernald@gmail.com  | 0785344567  | NULL |
+| 2147483647 | Evode     | NIZEYIMANA  | MALE   | NORTH    | MUSANZE    | KINIGI     | KARAGWE    | evode@gmail.com    | 07895466734 | NULL |
+| 2147483647 | Emannuel  | IRANZI      | MALE   | KIGALI   | NYARUGENGE | GITESI     | KARAMBI    | emmanuel@gmail.com | 0794566734  | NULL |
+| 2147483647 | Venuste   | NDAHAYO     | MALE   | EASTER   | KAYONZA    | MUKINGO    | KARENGE    | venuste@gmail.com  | 07865443216 | NULL |
+| 2147483647 | Belyse    | KANGABE     | FEMALE | NORTH    | GICUMBI    | KIRAMURUZI | MUGOMERO   | belyse@gmail.com   | 07886533278 | NULL |
+| 2147483647 | Jdamila   | UMWIZA      | FEMALE | WEST     | RUBAVU     | MBUGANGARI | BUSASAMANA | djamila@gmail.com  | 0786455378  | NULL |
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age = 10;
+Query OK, 10 rows affected (0.01 sec)
+Rows matched: 10  Changed: 10  Warnings: 0
+
+mysql> select * from ngoma;
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+------+
+| id         | firstName | lastName    | gender | province | district   | sector     | cell       | emailAdress        | telephone   | age  |
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+------+
+| 2147483647 | Claude    | NISHIMWE    | MALE   | WEST     | KARONGI    | MURUNDI    | KABAYA     | claude@gmail.com   | 0786544345  |   10 |
+| 2147483647 | Claudine  | ISHIMWE     | FEMALE | KIGALI   | GASABO     | KAKIRU     | KAMUTWA    | claudine@gmail.com | 0793455628  |   10 |
+| 2147483647 | Janviel   | NIYONSENGA  | MALE   | EASTER   | NYAGATARE  | RUKOMA     | RUKINGU    | janviel@gmail.com  | 0796544324  |   10 |
+| 2147483647 | Adolphe   | NAYITURIKI  | MALE   | SOUTH    | HUYE       | NGOMA      | RUHANDE    | adolphe@gmail.com  | 0786544276  |   10 |
+| 2147483647 | Bernard   | NDAGIJIMANA | MALE   | SOUTH    | RUHANGO    | MUHOZA     | KAREBA     | bernald@gmail.com  | 0785344567  |   10 |
+| 2147483647 | Evode     | NIZEYIMANA  | MALE   | NORTH    | MUSANZE    | KINIGI     | KARAGWE    | evode@gmail.com    | 07895466734 |   10 |
+| 2147483647 | Emannuel  | IRANZI      | MALE   | KIGALI   | NYARUGENGE | GITESI     | KARAMBI    | emmanuel@gmail.com | 0794566734  |   10 |
+| 2147483647 | Venuste   | NDAHAYO     | MALE   | EASTER   | KAYONZA    | MUKINGO    | KARENGE    | venuste@gmail.com  | 07865443216 |   10 |
+| 2147483647 | Belyse    | KANGABE     | FEMALE | NORTH    | GICUMBI    | KIRAMURUZI | MUGOMERO   | belyse@gmail.com   | 07886533278 |   10 |
+| 2147483647 | Jdamila   | UMWIZA      | FEMALE | WEST     | RUBAVU     | MBUGANGARI | BUSASAMANA | djamila@gmail.com  | 0786455378  |   10 |
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age = 40 where province = 'north';
+Query OK, 2 rows affected (0.00 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from ngoma;
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+------+
+| id         | firstName | lastName    | gender | province | district   | sector     | cell       | emailAdress        | telephone   | age  |
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+------+
+| 2147483647 | Claude    | NISHIMWE    | MALE   | WEST     | KARONGI    | MURUNDI    | KABAYA     | claude@gmail.com   | 0786544345  |   10 |
+| 2147483647 | Claudine  | ISHIMWE     | FEMALE | KIGALI   | GASABO     | KAKIRU     | KAMUTWA    | claudine@gmail.com | 0793455628  |   10 |
+| 2147483647 | Janviel   | NIYONSENGA  | MALE   | EASTER   | NYAGATARE  | RUKOMA     | RUKINGU    | janviel@gmail.com  | 0796544324  |   10 |
+| 2147483647 | Adolphe   | NAYITURIKI  | MALE   | SOUTH    | HUYE       | NGOMA      | RUHANDE    | adolphe@gmail.com  | 0786544276  |   10 |
+| 2147483647 | Bernard   | NDAGIJIMANA | MALE   | SOUTH    | RUHANGO    | MUHOZA     | KAREBA     | bernald@gmail.com  | 0785344567  |   10 |
+| 2147483647 | Evode     | NIZEYIMANA  | MALE   | NORTH    | MUSANZE    | KINIGI     | KARAGWE    | evode@gmail.com    | 07895466734 |   40 |
+| 2147483647 | Emannuel  | IRANZI      | MALE   | KIGALI   | NYARUGENGE | GITESI     | KARAMBI    | emmanuel@gmail.com | 0794566734  |   10 |
+| 2147483647 | Venuste   | NDAHAYO     | MALE   | EASTER   | KAYONZA    | MUKINGO    | KARENGE    | venuste@gmail.com  | 07865443216 |   10 |
+| 2147483647 | Belyse    | KANGABE     | FEMALE | NORTH    | GICUMBI    | KIRAMURUZI | MUGOMERO   | belyse@gmail.com   | 07886533278 |   40 |
+| 2147483647 | Jdamila   | UMWIZA      | FEMALE | WEST     | RUBAVU     | MBUGANGARI | BUSASAMANA | djamila@gmail.com  | 0786455378  |   10 |
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age = 42 where province = 'south';
+Query OK, 2 rows affected (0.00 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from ngoma;
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+------+
+| id         | firstName | lastName    | gender | province | district   | sector     | cell       | emailAdress        | telephone   | age  |
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+------+
+| 2147483647 | Claude    | NISHIMWE    | MALE   | WEST     | KARONGI    | MURUNDI    | KABAYA     | claude@gmail.com   | 0786544345  |   10 |
+| 2147483647 | Claudine  | ISHIMWE     | FEMALE | KIGALI   | GASABO     | KAKIRU     | KAMUTWA    | claudine@gmail.com | 0793455628  |   10 |
+| 2147483647 | Janviel   | NIYONSENGA  | MALE   | EASTER   | NYAGATARE  | RUKOMA     | RUKINGU    | janviel@gmail.com  | 0796544324  |   10 |
+| 2147483647 | Adolphe   | NAYITURIKI  | MALE   | SOUTH    | HUYE       | NGOMA      | RUHANDE    | adolphe@gmail.com  | 0786544276  |   42 |
+| 2147483647 | Bernard   | NDAGIJIMANA | MALE   | SOUTH    | RUHANGO    | MUHOZA     | KAREBA     | bernald@gmail.com  | 0785344567  |   42 |
+| 2147483647 | Evode     | NIZEYIMANA  | MALE   | NORTH    | MUSANZE    | KINIGI     | KARAGWE    | evode@gmail.com    | 07895466734 |   40 |
+| 2147483647 | Emannuel  | IRANZI      | MALE   | KIGALI   | NYARUGENGE | GITESI     | KARAMBI    | emmanuel@gmail.com | 0794566734  |   10 |
+| 2147483647 | Venuste   | NDAHAYO     | MALE   | EASTER   | KAYONZA    | MUKINGO    | KARENGE    | venuste@gmail.com  | 07865443216 |   10 |
+| 2147483647 | Belyse    | KANGABE     | FEMALE | NORTH    | GICUMBI    | KIRAMURUZI | MUGOMERO   | belyse@gmail.com   | 07886533278 |   40 |
+| 2147483647 | Jdamila   | UMWIZA      | FEMALE | WEST     | RUBAVU     | MBUGANGARI | BUSASAMANA | djamila@gmail.com  | 0786455378  |   10 |
++------------+-----------+-------------+--------+----------+------------+------------+------------+--------------------+-------------+------+
+10 rows in set (0.00 sec)
+
+mysql> select * from ngoma;
